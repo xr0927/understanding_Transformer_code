@@ -2,7 +2,7 @@ A link to the Pytorch version implemented by the Harvard NLP team https://github
 
 😄😄Not in the order of the original project code, in the order of my own understanding😄😄
 
-###Let's start with the Attention function, which implements the multihead self-attention calculation in Transformer.
+### Let's start with the Attention function, which implements the multihead self-attention calculation in Transformer.
 ```bash
 def attention(query, key, value, mask=None, dropout=None):
 
@@ -22,7 +22,7 @@ Then we multiply the matrix of query and key, divided by a scalar.
 
 Then softmax, the resulting matrix is multiplied by the value matrix, and finally returns the multiplied matrix and P_attn, which I refer to as the weight matrix and P matrix.
 
-###Then look at the implementation of the multi-headed self-attention mechanism class.
+### Then look at the implementation of the multi-headed self-attention mechanism class.
 ```bash
 class MultiHeadedAttention(nn.Module):
     def __init__(self, h, d_model, dropout=0.1):
